@@ -23,7 +23,7 @@ export async function removeContact(id) {
     return null;
   }
   const result = remContact.splice(index, 1);
-  await fs.writeFile(contactsPath.JSON.stringify(remContact));
+  await fs.writeFile(contactsPath, JSON.stringify(remContact));
   return result;
 }
 
